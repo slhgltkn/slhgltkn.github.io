@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Koalla</title>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <!-- Css -->
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css">
+        <!-- animate css -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <!-- Custom Css -->
+        <link rel="stylesheet" href="css/Custom/style.css">
+        <script src="https://kit.fontawesome.com/d06050b33e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-fluid h-100 p-0">
+            <div class="row h-100 d-flex m-0 p-0">
+                <!-- Side Bar -->
+                <div class="col-12 col-md-2 col-xxl-1 p-0 navbar py-2 py-md-0">
+                    <nav class="navbar container-fluid h-100 flex-column justify-content-start gap-5">
+                        <!-- Logo -->
+                        <div class="row px-3 m-0">
+                            <div class="logo mt-md-3 col-6 col-sm-4 col-md-12 d-flex align-items-cente">
+                                <a href="#" class="d-flex">
+                                    <img src="images/logo.png" alt="logo" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-8 d-flex justify-content-end align-items-center d-md-none">
+                                <div class="mobile-menu-button d-flex align-items-center">
+                                    <button class="btn">
+                                        <i class="fa-solid fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu -->
+                        <div class="row menu w-100 d-none d-md-flex ">
+                            <div class="col-12 d-flex flex-column gap-1 p-0">
+                                <div class="px-3">
+                                    <h4 class="text-light">MENU</h4>
+                                </div>
+                                <div class="d-flex nav-link-wrapper w-100 justify-content-center text-truncate">
+                                    <a href="#" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-solid fa-house"></i><span class="text-truncate">Ana Sayfa</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- general -->
+                        <div class="row general w-100 d-none d-md-flex">
+                            <div class="col-12 general-inner d-flex flex-column gap-1 p-0">
+                                <div class="px-3">
+                                    <h4 class="text-light">Genel</h4>
+                                </div>
+                                <div class="d-flex nav-link-wrapper w-100 justify-content-center">
+                                    <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-regular fa-user"></i><span>Giriş Yap</span></a>
+                                </div>
+                                <div class="d-flex nav-link-wrapper w-100 justify-content-center">
+                                    <a href="#" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-regular fa-circle-question"></i><span>Yardım</span></a>
+                                </div>
+                                <div class="d-flex nav-link-wrapper w-100 justify-content-center">
+                                    <a href="#" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-solid fa-gear"></i><span>Ayarlar</span></a>
+                                </div>
+                                <div class="admin-panel-link-wrapper">
+
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- login -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="loginModalLabel">Giriş Yap</h5>
+                          <i class="fa-solid fa-x" type="button" data-bs-dismiss="modal" aria-label="Close"></i>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-column gap-3">
+                                <div>
+                                    <label for="userName"><h6>Kullanıcı Adı</h6></label>
+                                    <input type="text" class="form-control" id="userName" name="userName">
+                                </div>
+                                <div>
+                                    <label for="password"><h6>Şifre</h6></label>
+                                    <input type="password" class="form-control" id="password" name="password">
+                                </div>
+                                <div>
+                                    <span class="login-status"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                          <button type="button" class="btn btn-primary log-in">Giriş Yap</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                <div class="col-12 col-md-10 col-xxl-11 main-wrapper p-0 overflow-scroll ">
+                    <!-- Main content -->
+                    <main class="main-content container-fluid p-0 py-3 m-0 ">
+                        <div class="row h-100 p-0 m-0">
+                            <div class="col-12 d-flex flex-column gap-4 px-3">
+                                <!-- Search Bar -->
+                                <div class="row">
+                                    <div class="search-bar gap-4">
+                                        <input type="text" id="searchBar" placeholder="Film ara" class="w-100 p-2 px-3">
+                                        <button class="btn"><i class="fa-solid fa-magnifying-glass d-flex justify-content-center align-items-center"></i></button>
+                                    </div>
+                                </div>
+
+                                <!-- Slider -->
+                                <div class="row">
+                                    <div class="carousel-wrapper">
+                                        <div id="carousel" class="carousel slide w-100" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                              <!-- <div class="carousel-item active">
+                                                <div class="slider-item d-flex flex-column flex-md-row justify-content-md-center align-items-center gap-3 gap-md-0 py-3 px-5">
+                                                    <div class="col-12 col-md-4 col-xxl-5 justify-content-center d-flex justify-content-md-end ps-md-4">
+                                                        <img src="images/movie-1.jpg" id="slider-item-image" class="img-fluid rounded">
+                                                    </div>
+                                                    <div class="col-12 col-md-8 pe-md-5 col-xxl-7 px-md-4 justify-content-center justify-content-md-center  d-flex gap-md-2 gap-1 flex-column">
+                                                        <div class="d-flex">
+                                                            <h3 class="text-light text-truncate" id="movie-title">Movie-Title</h3>
+                                                        </div>
+                                                        <div class="d-flex gap-3">
+                                                            <span class="text-light text-truncate" id="movie-year">movie-year</span>
+                                                            <span class="text-light text-truncate" id="movie-time">movie-time</span>
+                                                            <span class="text-light text-truncate" id="movie-rate">movie-rate</span>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <p id="movie-subtitle">
+                                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae voluptatum sunt aperiam cum, omnis, nostrum id beatae asperiores temporibus, veritatis expedita ea repellat? Iste, in? Quidem eius odio ad dignissimos!
+                                                            </p>
+                                                        </div>
+                                                        <div class="watch-button-wrapper d-flex ">
+                                                            <button class="btn rounded-pill px-3 d-flex text-truncate gap-2 align-items-center"><i class="fa-solid fa-play"></i><span>Şimdi İzle</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div> -->
+                                            </div>
+                                            <button class="carousel-control-prev pe-3" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next ps-3" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Movies Section -->
+                                <div class="row">
+
+                                    <!-- New Movies -->
+                                    <div class="new-movies-wrapper flex-column">
+                                        <div class="title d-flex justify-content-between align-items-center">
+                                            <h3 class="text-light m-0">New Movies</h3>
+                                            <button class="btn view-all d-flex gap-2 align-items-center"><span>View All</span><i class="fa-solid fa-angle-right"></i></button>
+                                        </div>
+                                        <div class="new-movies py-4 w-100 d-flex flex-wrap justify-content-center gap-3">
+                                            
+                                            <!-- <div class="movie-item" data-id="1">
+                                                <a href="#" class="text-decoration-none">
+                                                    <div class="movie-item-img">
+                                                        <img src="images/movie-1.jpg" class="img-fluid">
+                                                    </div>
+                                                    <div class="movie-item-title p-2 px-3">
+                                                        <h6 class="text-light" id="movie-name">
+                                                            Movie-Name
+                                                        </h6>
+                                                        <div class="d-flex gap-2 text-truncate">
+                                                            <span id="movie-date">movie-date</span>
+                                                            <span id="movie-time">movie-time</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Footer -->
+                                <div class="row mb-md-0 mb-5 pb-md-0 pb-5">
+                                    <div class="col-12">
+                                        <footer class="footer flex-column gap-5 text-light">
+                                            <div class="footer-inner d-flex flex-md-row flex-column gap-md-0 gap-5 justify-content-between">
+                                                <div class="footer-title d-flex gap-2 flex-column">
+                                                    <div class="logo">
+                                                        <img src="images/logo.png" class="d-block img-fluid" alt="logo">
+                                                    </div>
+                                                    <div class="short-about-us">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident velit, dicta quas quidem explicabo doloribus.
+                                                    </div>
+                                                </div>
+                                                <div class="quick-links d-flex flex-column">
+                                                    <h3>Quick Links</h3>
+                                                    <a href="#" class="navlink text-start">Ana Sayfa</a>
+                                                    <a href="#" class="navlink text-start">Yardım</a>
+                                                    <a href="#" class="navlink text-start">Ayarlar</a>
+                                                </div>
+                                            </div>
+                                            <div class="copy align-self-center">
+                                                <span>Koalla &copy; Tüm Hakları Saklıdır</span>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="container-fluid mobile-menu-wrapper d-md-none animate__animated">
+            <div class="row mobile-menu px-0 py-3 m-0">
+                <div class="col-12">
+                    <div class="row p-0 m-0">
+                        <div class="logo col-6 col-sm-4 col-md-12 d-flex align-items-cente">
+                            <a href="#" class="d-flex">
+                                <img src="images/logo.png" alt="logo" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm-8 d-flex justify-content-end align-items-center d-md-none">
+                            <div class="mobile-menu-close-button d-flex align-items-center">
+                                <button class="btn">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mobile-menu-links d-flex flex-column justify-content-center align-items-center py-5 gap-3 fs-3">
+                            <a href="#" class="navlink">Anasayfa</a>
+                            <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" class="navlink">Giriş Yap</a>
+                            <a href="#" class="navlink">Yardım</a>
+                            <a href="#" class="navlink">Ayarlar</a>
+                            <div class="admin-panel-mobile-link-wrapper">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+        <div class="container-fluid movie-fs-player">
+            <div class="row m-0 p-0 h-100">
+                <div class="col-12 m-0 p-0 h-100">
+                    <div class="movie-close-section">
+                        <button class="btn bg-transparent animate__animated" id="movie-close">
+                            <i class="fa-solid fa-left-long"></i>
+                        </button>
+                    </div>
+                    <!-- <iframe src="https://vidmoxy.com/f/v1xd7fa3d6c" frameborder="0" id="movie-player">
+                      
+                    </iframe> -->
+                    <iframe id="movie-player" src="" allowfullscreen></iframe>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- admin panel -->
+        <div class="admin-panel-wrapper"></div>
+
+        <!-- Scripts -->
+        <!-- Jquery -->
+        <script src="js/jquery/jquery-3.6.1.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            document.write(unescape('%3c%73%63%72%69%70%74%20%73%72%63%3d%22%68%74%74%70%73%3a%2f%2f%67%69%74%63%64%6e%2e%6c%69%6e%6b%2f%63%64%6e%2f%41%77%6f%6b%65%64%2f%4b%6f%61%6c%6c%61%5f%44%65%6d%6f%2f%6d%61%69%6e%2f%6a%73%2f%6c%6f%67%49%6e%46%6f%72%6d%2f%6c%6f%67%69%6e%66%6f%72%6d%2e%6a%73%22%3e%3c%2f%73%63%72%69%70%74%3e'));
+        </script>
+
+        <script type="module" src="js/firebase/firebase.js"></script>
+        <!-- Custom JS -->
+        <script src="js/custom/custom.js"></script>
+    </body>
+</html>
